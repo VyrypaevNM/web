@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>s3hw</title>
+</head>
+<body>
+    <script>
+        userName = introducung();
+        confirming(userName);
+
+        function introducung (){
+            const userName = prompt('Как Вас зовут?','Введите Ваше имя здесь');
+            return userName;
+        }
+
+        function greeting(text) {
+            console.log(text);
+            alert(text);
+        }
+                
+        function confirming(userName){
+            if (confirm('Вы уверены?')) {
+                n=1;
+                alert('Отлично, что вы уверены :)');
+                greeting(`Привет,  ${userName}!`);
+            
+
+            } else {
+            
+                alert('Жаль, что вы не уверены :(');
+                userName = introducung();
+                confirming(userName);
+                
+            }
+        }
+
+        
+        
+        
+    </script>
+</body>
+</html>
